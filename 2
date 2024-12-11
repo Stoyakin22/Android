@@ -1,1 +1,12 @@
-<iframe src="https://pl.kotl.in/YXm9oUXXH"></iframe>
+import kotlin.random.Random
+
+fun main() {
+    val randomNumber = Random.nextInt(1, 100) // Генерация случайного числа от 1 до 99
+    val randomChar = randomNumber.toString()[0] // Преобразование числа в символ (берем только первый символ)
+
+    when {
+        randomChar.isDigit() -> println("$randomChar - это цифра")
+        randomChar.isLetter() -> println("$randomChar - это буква")
+        else -> println("$randomChar - это символ")
+    }
+}
