@@ -1,1 +1,19 @@
-<iframe src="https://pl.kotl.in/FijhdxrzP"></iframe>
+fun main() {
+    var pair1 = 1 // Starting pair
+    var pair2 = 1 // Starting pair
+    var totalPairs = pair1 + pair2
+
+
+    println("Month 1: $pair1")
+    println("Month 2: $pair2")
+
+    for (month in 3..12) { // Months 3 through 12
+        val newPairs = pair1 + pair2
+        totalPairs += newPairs
+        pair1 = pair2
+        pair2 = newPairs
+        println("Month $month: $newPairs Total Pairs: $totalPairs")
+    }
+
+    println("\nTotal pairs of rabbits after 12 months: $totalPairs")
+}
